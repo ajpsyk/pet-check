@@ -10,9 +10,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_mdules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use:['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        }
       }
     ]
   },

@@ -1,0 +1,32 @@
+.hero-page {
+  color: #4C3782;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  padding-left: 120px;
+}
+
+.page-one-header {
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 10px;
+  font-family: source-sans-pro,sans-serif;
+}
+
+.app-description {
+  font-size: 22px;
+  max-width: 750px;
+  text-align: center;
+}
+
+.learn-more-btn {
+  background-color: #4B7FE8;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 7px;
+  margin-top: 30px;
+}
