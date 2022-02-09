@@ -9975,7 +9975,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _styles_Benefits_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/Benefits.css */ "./src/styles/Benefits.css");
-/* harmony import */ var _BenefitsList_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BenefitsList.js */ "./src/components/BenefitsList.js");
+/* harmony import */ var _BenefitsData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BenefitsData.js */ "./src/components/BenefitsData.js");
 /* harmony import */ var _images_Benefits_Check_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../images/Benefits_Check.png */ "./images/Benefits_Check.png");
 
 
@@ -9989,10 +9989,10 @@ var Benefits = function Benefits() {
     className: "benefits-hero-head"
   }, "What Pet Check Does For You"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("dl", {
     className: "benefits-list"
-  }, _BenefitsList_js__WEBPACK_IMPORTED_MODULE_2__.BenefitsList.map(function (item, index) {
+  }, _BenefitsData_js__WEBPACK_IMPORTED_MODULE_2__.benefitsData.map(function (item, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "benefits-list-item",
-      key: "index"
+      key: index
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("dt", {
       className: "benefits-list-title"
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -10008,17 +10008,17 @@ var Benefits = function Benefits() {
 
 /***/ }),
 
-/***/ "./src/components/BenefitsList.js":
+/***/ "./src/components/BenefitsData.js":
 /*!****************************************!*\
-  !*** ./src/components/BenefitsList.js ***!
+  !*** ./src/components/BenefitsData.js ***!
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BenefitsList": () => (/* binding */ BenefitsList)
+/* harmony export */   "benefitsData": () => (/* binding */ benefitsData)
 /* harmony export */ });
-var BenefitsList = [{
+var benefitsData = [{
   title: 'Accurate Pet Records',
   description: 'Ensure pet record accuracy with client confirmation of medication administration.'
 }, {
@@ -10045,15 +10045,99 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _BlogData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlogData */ "./src/components/BlogData.js");
+/* harmony import */ var _BlogPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BlogPost */ "./src/components/BlogPost.js");
+/* harmony import */ var _styles_BlogArchive_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/BlogArchive.css */ "./src/styles/BlogArchive.css");
+
+
+
 
 
 var BlogArchive = function BlogArchive() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "blog-archive"
-  });
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "archive-head"
+  }, "Recent Posts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "archive-items"
+  }, _BlogData__WEBPACK_IMPORTED_MODULE_1__.blogData.map(function (post, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      className: "archive-post",
+      key: index
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      className: "archive-post-image",
+      src: post.image
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+      className: "archive-post-title"
+    }, post.title));
+  })));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlogArchive);
+
+/***/ }),
+
+/***/ "./src/components/BlogData.js":
+/*!************************************!*\
+  !*** ./src/components/BlogData.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "blogData": () => (/* binding */ blogData)
+/* harmony export */ });
+var blogData = [{
+  title: 'Ways to Calm an Anxious Dog',
+  image: 'https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+  author: '',
+  content: "It's not uncommon for a dog to be anxious and stressed during fireworks and other loud noises. Here are several ways you can help calm your dog to minimize the effects of these sounds.\n\n6 Easy Ways to Calm an Anxious Dog\n1. Turn on some calming music or white noise such as fans, air conditioners, or static. This will allow your dog to tune out some of the ambient noise around them, helping them relax more quickly without depending on outside stimuli such as food treats so much. (edited)\n[3:30 PM]\n2. Create a \"den\" for your dog. A den is a safe space for them to retreat to so they can feel secure and safe to be away from all the noise outside. As part of the den, you will need several highly desirable food treats such as turkey hot dogs, chicken, cheese, etc. You will want about 12-15 goodies that are easily accessible at any given time during this training period. Put them in your pocket or close by. You may even want to put some treats on the other side of the room so that you need to move away from them before getting each one.\n3. Turn off all lights or light up a dark room with only indirect lighting. This allows your dog's eyes to start to adjust, which can help calm their anxiety due to sensory overload.\n4. Train! During fireworks, please take out your treats and start giving them out for any positive behavior such as: sitting, laying down, cuddling in a blanket, going into the den, etc. Start doing this well ahead of when the fireworks will go off, and continue until just after they have finished exploding to help your dog learn coping mechanisms to deal with the noise. (edited)\n[3:30 PM]\n5. If your dog is not interested in treats during loud noises, enlist their help as part of a training game they like, such as fetch or tug of war which will make them want to play with you instead of run away from you. This may be more effective for some dogs than others, but it's worth trying.\n6. Use calming treats with CBD.  Treats with CBD (cannabidiol) oil can help with the anxiety your dog is feeling. Some studies have shown that dogs receiving these treats respond better to treatment than those not receiving them, so it's worth trying.\nFinal Thoughts\nNo one wants to see their dog feeling anxious and stressed, but there are several ways you can help calm them down. By using some of the tips we've provided, you can help your dog feel more at ease during loud noises such as fireworks. If all of this seems daunting, don't worry! Our team is here to help. Let us know how we can support you in helping your furry friend feel better during stressful times.",
+  date: '',
+  url: ''
+}, {
+  title: 'Why Cats Make Great Pets',
+  image: 'https://images.unsplash.com/photo-1513977055326-8ae6272d90a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2727&q=80',
+  author: '',
+  content: '',
+  url: ''
+}, {
+  title: '3 Most Common Dog Allergies',
+  image: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+  author: '',
+  content: '',
+  url: ''
+}, {
+  title: '8 Gift Ideas for Veterinarian Front Office Staff',
+  image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+  author: '',
+  content: '',
+  url: ''
+}];
+
+/***/ }),
+
+/***/ "./src/components/BlogPost.js":
+/*!************************************!*\
+  !*** ./src/components/BlogPost.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _styles_BlogPost_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/BlogPost.css */ "./src/styles/BlogPost.css");
+
+
+
+var BlogPost = function BlogPost(_ref) {
+  var post = _ref.post,
+      index = _ref.index;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlogPost);
 
 /***/ }),
 
@@ -10198,6 +10282,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavBarItems__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBarItems */ "./src/components/NavBarItems.js");
 /* harmony import */ var _images_Pet_Check_Mark_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../images/Pet_Check_Mark.png */ "./images/Pet_Check_Mark.png");
 /* harmony import */ var _styles_NavBar_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/NavBar.css */ "./src/styles/NavBar.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+
 
 
 
@@ -10209,16 +10295,18 @@ var NavBar = function NavBar() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "menu-icon",
     src: _images_Pet_Check_Mark_png__WEBPACK_IMPORTED_MODULE_2__["default"]
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.NavLink, {
+    to: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "navbar-logo"
-  }, "Pet Check"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+  }, "Pet Check")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "nav-items"
   }, _NavBarItems__WEBPACK_IMPORTED_MODULE_1__.NavBarItems.map(function (item, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
       key: index
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-      className: item.className,
-      href: item.url
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.NavLink, {
+      to: item.url,
+      className: item.className
     }, item.title));
   })));
 };
@@ -10247,15 +10335,15 @@ var NavBarItems = [{
   className: 'nav-bar-items'
 }, {
   title: 'Blog',
-  url: '#',
+  url: '/blog',
   className: 'nav-bar-items'
 }, {
   title: 'Login',
-  url: '#',
+  url: '/login',
   className: 'nav-bar-items'
 }, {
   title: 'Try It Free',
-  url: '#',
+  url: '/signup',
   className: 'try-it-free'
 }];
 
@@ -10307,6 +10395,58 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".benefits-hero {\n  color: #1F0070;\n  background: #c0aed6;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.benefits-hero-head {\n  background: #c0aed6;\n  font-size: 45.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n  margin-bottom: 30px;\n}\n\n.benefits-list {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.benefits-list-item {\n  width: 50%;\n  background: #c0aed6;\n  justify-content: center;\n  padding-left: 95px;\n  padding-bottom: 30px;\n}\n\n.benefits-check-img {\n  width: 50px;\n  background: #c0aed6;\n  padding-right: 5px;\n  margin-top: 50px;\n}\n\n.benefits-list-title {\n  background: #c0aed6;\n  font-size: 40px;\n  max-width: 500px;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.benefits-list-descrip {\n  color: white;\n  background: #c0aed6;\n  font-size: 16.7px;\n  max-width: 350px;\n  padding-left: 50px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/Benefits.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,iBAAiB;EACjB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,UAAU;EACV,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,WAAW;EACX,mBAAmB;EACnB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;EACnB,eAAe;EACf,gBAAgB;EAChB,uBAAuB;EACvB,mBAAmB;EACnB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;AACpB","sourcesContent":[".benefits-hero {\n  color: #1F0070;\n  background: #c0aed6;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.benefits-hero-head {\n  background: #c0aed6;\n  font-size: 45.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n  margin-bottom: 30px;\n}\n\n.benefits-list {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.benefits-list-item {\n  width: 50%;\n  background: #c0aed6;\n  justify-content: center;\n  padding-left: 95px;\n  padding-bottom: 30px;\n}\n\n.benefits-check-img {\n  width: 50px;\n  background: #c0aed6;\n  padding-right: 5px;\n  margin-top: 50px;\n}\n\n.benefits-list-title {\n  background: #c0aed6;\n  font-size: 40px;\n  max-width: 500px;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.benefits-list-descrip {\n  color: white;\n  background: #c0aed6;\n  font-size: 16.7px;\n  max-width: 350px;\n  padding-left: 50px;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/BlogArchive.css":
+/*!**************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/BlogArchive.css ***!
+  \**************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".blog-archive {\n  color: #1F0070;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 100px;\n}\n\n.archive-head {\n  font-size: 48px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.archive-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  list-style: none;\n}\n\n.archive-post {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 0px;\n}\n\n.archive-post-image {\n  width: 425px;\n  height: 225px;\n\n}\n\n.archive-post-title {\n  color: #4B7FE8;\n  font-size: 24px;\n  font-weight: 700;\n  font-family: source-sans-pro,sans-serif;\n  font-style: normal;\n  margin-top: 20px;\n}", "",{"version":3,"sources":["webpack://./src/styles/BlogArchive.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,uCAAuC;AACzC;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,iBAAiB;AACnB;;AAEA;EACE,YAAY;EACZ,aAAa;;AAEf;;AAEA;EACE,cAAc;EACd,eAAe;EACf,gBAAgB;EAChB,uCAAuC;EACvC,kBAAkB;EAClB,gBAAgB;AAClB","sourcesContent":[".blog-archive {\n  color: #1F0070;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 100px;\n}\n\n.archive-head {\n  font-size: 48px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.archive-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  list-style: none;\n}\n\n.archive-post {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 0px;\n}\n\n.archive-post-image {\n  width: 425px;\n  height: 225px;\n\n}\n\n.archive-post-title {\n  color: #4B7FE8;\n  font-size: 24px;\n  font-weight: 700;\n  font-family: source-sans-pro,sans-serif;\n  font-style: normal;\n  margin-top: 20px;\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/BlogPost.css":
+/*!***********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/BlogPost.css ***!
+  \***********************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".archive-post-image {\n  width: 20px;\n}", "",{"version":3,"sources":["webpack://./src/styles/BlogPost.css"],"names":[],"mappings":"AAAA;EACE,WAAW;AACb","sourcesContent":[".archive-post-image {\n  width: 20px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10384,7 +10524,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}", "",{"version":3,"sources":["webpack://./src/styles/NavBar.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,oBAAoB;EACpB,qBAAqB;EACrB,oBAAoB;EACpB,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,WAAW;EACX,eAAe;EACf,iBAAiB;EACjB,uBAAuB;AACzB;;AAEA;EACE,cAAc;EACd,sBAAsB;EACtB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,cAAc;EACd,qBAAqB;EACrB,sCAAsC;EACtC,cAAc;EACd,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,aAAa;EACb,oBAAoB;EACpB,iBAAiB;EACjB,mBAAmB;EACnB,iBAAiB;EACjB,cAAc;EACd,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB","sourcesContent":[".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n  color: #4C3782;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}", "",{"version":3,"sources":["webpack://./src/styles/NavBar.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,oBAAoB;EACpB,qBAAqB;EACrB,oBAAoB;EACpB,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,WAAW;EACX,eAAe;EACf,iBAAiB;EACjB,uBAAuB;AACzB;;AAEA;EACE,cAAc;EACd,sBAAsB;EACtB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,cAAc;EACd,qBAAqB;EACrB,sCAAsC;EACtC,cAAc;EACd,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,qBAAqB;EACrB,cAAc;AAChB;;AAEA;EACE,aAAa;EACb,oBAAoB;EACpB,iBAAiB;EACjB,mBAAmB;EACnB,iBAAiB;EACjB,cAAc;EACd,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB","sourcesContent":[".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n  color: #4C3782;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10551,6 +10691,114 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_Benefits_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_Benefits_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_Benefits_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/styles/BlogArchive.css":
+/*!************************************!*\
+  !*** ./src/styles/BlogArchive.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_BlogArchive_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./BlogArchive.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/BlogArchive.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_BlogArchive_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_BlogArchive_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_BlogArchive_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_BlogArchive_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/styles/BlogPost.css":
+/*!*********************************!*\
+  !*** ./src/styles/BlogPost.css ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_BlogPost_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./BlogPost.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/BlogPost.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_BlogPost_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_BlogPost_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_BlogPost_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_BlogPost_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),

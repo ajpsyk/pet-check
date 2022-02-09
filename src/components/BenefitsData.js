@@ -1,4 +1,4 @@
-export const BenefitsList = [
+export const benefitsData = [
   {
     title: 'Accurate Pet Records',
     description: 'Ensure pet record accuracy with client confirmation of medication administration.'

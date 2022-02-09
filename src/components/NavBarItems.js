@@ -11,17 +11,17 @@ export const NavBarItems = [
   },
   {
     title: 'Blog',
-    url: '#',
+    url: '/blog',
     className: 'nav-bar-items'
   },
   {
     title: 'Login',
-    url: '#',
+    url: '/login',
     className: 'nav-bar-items'
   },
   {
     title: 'Try It Free',
-    url: '#',
+    url: '/signup',
     className: 'try-it-free'
   }
 ]
