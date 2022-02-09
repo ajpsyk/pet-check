@@ -1,12 +1,12 @@
 export const NavBarItems = [
   {
     title: 'Features',
-    url: '#',
+    url: '/#section1',
     className: 'nav-bar-items'
   },
   {
     title: 'Benefits',
-    url: '#',
+    url: '/#section2',
     className: 'nav-bar-items'
   },
   {

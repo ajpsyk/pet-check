@@ -5,7 +5,7 @@ import Benefits_Check from '../../images/Benefits_Check.png';
 
 const Benefits = () => {
   return (
-    <div className="benefits-hero">
+    <div className="benefits-hero" id="section2">
       <h2 className="benefits-hero-head">What Pet Check Does For You</h2>
         <dl className="benefits-list">
           {benefitsData.map((item, index) => {

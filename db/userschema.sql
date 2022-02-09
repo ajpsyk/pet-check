@@ -1,8 +1,0 @@
-CREATE TABLE user_info (
-  id SERIAL PRIMARY KEY,
-  username VARCHAR(20) NOT NULL,
-  email VARCHAR(20) NOT NULL,
-  phone VARCHAR(20) NOT NULL,
-  company VARCHAR(20) NOT NULL,
-  password VARCHAR(20) NOT NULL
-)

@@ -1,6 +1,0 @@
-CREATE TABLE client_info (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(20) NOT NULL,
-  email VARCHAR(20) NOT NULL,
-  phone VARCHAR(20) NOT NULL
-)

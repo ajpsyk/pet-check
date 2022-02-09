@@ -5,7 +5,7 @@ import '../styles/Features.css';
 
 const Features = () => {
   return (
-    <div className="features-hero">
+    <div className="features-hero" id="section1">
       <div className="col">
         <img className="features-img" src={FeaturesImage}></img>
       </div>

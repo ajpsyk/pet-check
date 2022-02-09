@@ -8,7 +8,7 @@
 
 .post-title {
   color:#1F0070;
-  font-size: 32px;
+  font-size: 60px;
   font-weight: 700;
   font-style: normal;
   font-family: 'Source Sans Pro', sans-serif;
@@ -18,23 +18,25 @@
 
 .post-byline {
   color: #1562ff;
-  font-size: 18px;
+  font-size: 28px;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
 .post-image {
   max-width: 100%;
-  width: 500px;
+  width: 1000px;
   margin: 20px;
 }
 
 .post-content {
   color: #4c3782;
-  font-size: 17px;
+  font-size: 24px;
   margin-bottom: 10px;
   margin: 20px 150px;
   justify-content: start;
   text-align:start;
+  width: 1000px;
 }
 
 @media all and (max-width: 650px) {

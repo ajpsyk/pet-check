@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "start-backend": "nodemon ./backend/app.js",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,8 +22,12 @@
   "homepage": "https://github.com/ajpsyk/pet-check#readme",
   "dependencies": {
     "axios": "^0.25.0",
+    "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "pg": "^8.7.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1"

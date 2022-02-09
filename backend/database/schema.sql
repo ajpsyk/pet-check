@@ -1,0 +1,31 @@
+CREATE TABLE user_info (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(60) NOT NULL,
+  email VARCHAR(60) NOT NULL UNIQUE,
+  phone VARCHAR(60) NOT NULL,
+  company VARCHAR(60) NOT NULL,
+  password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE client_info (
+  id SERIAL PRIMARY KEY,
+  veternarian SERIAL REFERENCES user_info (id) ON DELETE CASCADE,
+  name VARCHAR(20) NOT NULL,
+  email VARCHAR(20) NOT NULL UNIQUE,
+  phone VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE pet_info (
+  id SERIAL PRIMARY KEY,
+  owner SERIAL REFERENCES client_info (id) ON DELETE CASCADE,
+  name VARCHAR(20) NOT NULL,
+  type VARCHAR(20) NOT NULL,
+  breed VARCHAR(20) NOT NULL,
+  dob VARCHAR(20) NOT NULL,
+  weight INTEGER NOT NULL,
+  medications VARCHAR(20) NOT NULL
+);
+
+CREATE INDEX ON user_info (id);
+CREATE INDEX ON client_info (id);
+CREATE INDEX ON pet_info (id);

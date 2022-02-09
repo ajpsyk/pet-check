@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from '../context/AuthProvider.js';
 import NavBar from './NavBar';
 import Home from './Home';
 import BlogArchive from './BlogArchive';

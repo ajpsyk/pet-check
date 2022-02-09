@@ -1,12 +1,15 @@
 .login-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: solid;
   border-width: 1px;
   background: white;
   margin-top: 60px;
   margin-left: 30%;
-  max-width: 40%;
+  margin-right: 30%;
+  max-width: 50%;
 }
 
 .login-head {
