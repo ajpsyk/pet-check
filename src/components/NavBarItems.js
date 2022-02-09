@@ -20,7 +20,7 @@ export const NavBarItems = [
     className: 'nav-bar-items'
   },
   {
-    title: 'Try It Free',
+    title: 'Sign Up',
     url: '/signup',
     className: 'try-it-free'
   }

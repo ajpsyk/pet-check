@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Home from './Home';
 import BlogArchive from './BlogArchive';
 import Login from './Login';
+import SignUp from './SignUp';
 import BlogPost from './BlogPost';
 import '../styles/App.css';
 
@@ -19,7 +20,8 @@ const App = () => {
           <Route path="/" element={<Home/>}/>
           <Route path="/blog" element={<BlogArchive setBlogPost={setBlogPost}/>} />
           <Route path="/post/:id" element={<BlogPost post={blogPost}/>} />
-          <Route path="/login" element= {<Login/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
         </Routes>
       </div>
     </Router>
