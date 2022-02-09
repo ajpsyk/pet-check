@@ -9934,12 +9934,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar */ "./src/components/NavBar.js");
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home */ "./src/components/Home.js");
 /* harmony import */ var _BlogArchive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BlogArchive */ "./src/components/BlogArchive.js");
-/* harmony import */ var _styles_App_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/App.css */ "./src/styles/App.css");
+/* harmony import */ var _BlogPost__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BlogPost */ "./src/components/BlogPost.js");
+/* harmony import */ var _styles_App_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/App.css */ "./src/styles/App.css");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -9948,14 +9962,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      blogPost = _useState2[0],
+      setBlogPost = _useState2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
     path: "/",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Home__WEBPACK_IMPORTED_MODULE_2__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
     path: "/blog",
-    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BlogArchive__WEBPACK_IMPORTED_MODULE_3__["default"], null)
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BlogArchive__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      setBlogPost: setBlogPost
+    })
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    path: "/post/:id",
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BlogPost__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      post: blogPost
+    })
   }))));
 };
 
@@ -10047,13 +10073,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _BlogData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlogData */ "./src/components/BlogData.js");
 /* harmony import */ var _BlogPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BlogPost */ "./src/components/BlogPost.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
 /* harmony import */ var _styles_BlogArchive_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/BlogArchive.css */ "./src/styles/BlogArchive.css");
 
 
 
 
 
-var BlogArchive = function BlogArchive() {
+
+var BlogArchive = function BlogArchive(_ref) {
+  var setBlogPost = _ref.setBlogPost;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "blog-archive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
@@ -10063,13 +10092,18 @@ var BlogArchive = function BlogArchive() {
   }, _BlogData__WEBPACK_IMPORTED_MODULE_1__.blogData.map(function (post, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
       className: "archive-post",
-      key: index
+      key: index,
+      onClick: function onClick() {
+        return setBlogPost(post);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+      to: "/post/".concat(post.id)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       className: "archive-post-image",
       src: post.image
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
       className: "archive-post-title"
-    }, post.title));
+    }, post.title)));
   })));
 };
 
@@ -10088,30 +10122,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "blogData": () => (/* binding */ blogData)
 /* harmony export */ });
 var blogData = [{
+  id: 1,
   title: 'Ways to Calm an Anxious Dog',
   image: 'https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-  author: '',
-  content: "It's not uncommon for a dog to be anxious and stressed during fireworks and other loud noises. Here are several ways you can help calm your dog to minimize the effects of these sounds.\n\n6 Easy Ways to Calm an Anxious Dog\n1. Turn on some calming music or white noise such as fans, air conditioners, or static. This will allow your dog to tune out some of the ambient noise around them, helping them relax more quickly without depending on outside stimuli such as food treats so much. (edited)\n[3:30 PM]\n2. Create a \"den\" for your dog. A den is a safe space for them to retreat to so they can feel secure and safe to be away from all the noise outside. As part of the den, you will need several highly desirable food treats such as turkey hot dogs, chicken, cheese, etc. You will want about 12-15 goodies that are easily accessible at any given time during this training period. Put them in your pocket or close by. You may even want to put some treats on the other side of the room so that you need to move away from them before getting each one.\n3. Turn off all lights or light up a dark room with only indirect lighting. This allows your dog's eyes to start to adjust, which can help calm their anxiety due to sensory overload.\n4. Train! During fireworks, please take out your treats and start giving them out for any positive behavior such as: sitting, laying down, cuddling in a blanket, going into the den, etc. Start doing this well ahead of when the fireworks will go off, and continue until just after they have finished exploding to help your dog learn coping mechanisms to deal with the noise. (edited)\n[3:30 PM]\n5. If your dog is not interested in treats during loud noises, enlist their help as part of a training game they like, such as fetch or tug of war which will make them want to play with you instead of run away from you. This may be more effective for some dogs than others, but it's worth trying.\n6. Use calming treats with CBD.  Treats with CBD (cannabidiol) oil can help with the anxiety your dog is feeling. Some studies have shown that dogs receiving these treats respond better to treatment than those not receiving them, so it's worth trying.\nFinal Thoughts\nNo one wants to see their dog feeling anxious and stressed, but there are several ways you can help calm them down. By using some of the tips we've provided, you can help your dog feel more at ease during loud noises such as fireworks. If all of this seems daunting, don't worry! Our team is here to help. Let us know how we can support you in helping your furry friend feel better during stressful times.",
-  date: '',
-  url: ''
+  author: 'Anthony',
+  content: "It's not uncommon for a dog to be anxious and stressed during fireworks and other loud noises. Here are several ways you can help calm your dog to minimize the effects of these sounds.\n    6 Easy Ways to Calm an Anxious Dog\n    1. Turn on some calming music or white noise such as fans, air conditioners, or static. This will allow your dog to tune out some of the ambient noise around them, helping them relax more quickly without depending on outside stimuli such as food treats so much.\n    2. Create a \"den\" for your dog. A den is a safe space for them to retreat to so they can feel secure and safe to be away from all the noise outside. As part of the den, you will need several highly desirable food treats such as turkey hot dogs, chicken, cheese, etc. You will want about 12-15 goodies that are easily accessible at any given time during this training period. Put them in your pocket or close by. You may even want to put some treats on the other side of the room so that you need to move away from them before getting each one.\n    3. Turn off all lights or light up a dark room with only indirect lighting. This allows your dog's eyes to start to adjust, which can help calm their anxiety due to sensory overload.\n    4. Train! During fireworks, please take out your treats and start giving them out for any positive behavior such as: sitting, laying down, cuddling in a blanket, going into the den, etc. Start doing this well ahead of when the fireworks will go off, and continue until just after they have finished exploding to help your dog learn coping mechanisms to deal with the noise. (edited)\n    5. If your dog is not interested in treats during loud noises, enlist their help as part of a training game they like, such as fetch or tug of war which will make them want to play with you instead of run away from you. This may be more effective for some dogs than others, but it's worth trying.\n    6. Use calming treats with CBD.  Treats with CBD (cannabidiol) oil can help with the anxiety your dog is feeling. Some studies have shown that dogs receiving these treats respond better to treatment than those not receiving them, so it's worth trying.\n    Final Thoughts\n    No one wants to see their dog feeling anxious and stressed, but there are several ways you can help calm them down. By using some of the tips we've provided, you can help your dog feel more at ease during loud noises such as fireworks. If all of this seems daunting, don't worry! Our team is here to help. Let us know how we can support you in helping your furry friend feel better during stressful times.",
+  date: ''
 }, {
+  id: 2,
   title: 'Why Cats Make Great Pets',
   image: 'https://images.unsplash.com/photo-1513977055326-8ae6272d90a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2727&q=80',
-  author: '',
-  content: '',
-  url: ''
+  author: 'Anthony',
+  content: "So you're thinking about getting yourself a cat.  Well, that's great!  Cats can be wonderful companions, and they certainly offer their owners many benefits - they're intelligent, affectionate, and come in a small package.  They're also low maintenance for the most part.\n    You might wonder if cats are the right pet for you, though.  After all, dogs are by far the most common pets in America, and they're known for their loyalty and companionship - can cats compare to that?\n    The truth is that there's a lot of misinformation out there about cats which makes them seem like poor choices as pets - but nothing could be further from the truth!  Cats make a wonderful addition to your family if you know what to expect from them.\n    In this article, I'll help you understand why cats are such great pets and how they can enrich your life in ways that you might not have considered before.\n    Why Cats Make Great Pets - Intelligent, Affectionate, and Convenient\n    Incredibly Smart\n    Cats are known for their intelligence, and rightfully so.\n    They are able to learn new tasks quickly and can be taught to do things like use the toilet and open doors.\n    This intelligence makes them easy to train and very adaptable, which is why they make such great pets.\n    Independent, Yet Affectionate\n    Cats are known for their affectionate nature.\n    They love to cuddle up with their owners and spend time with them.\n    This makes them a great choice for people who want a pet that will be by their side and provide companionship.\n    In addition, cats are very demonstrative in their affection - they'll often head butt you or give you a little love nip to show how much they care.\n    Small & Convenient\n    Cats are small and convenient, which is another reason they make such great pets.\n    They don't require a lot of space, so they're perfect for people who live in apartments or who have limited yard space.\n    In addition, cats are very low maintenance - they only need to be groomed every few weeks and don't need to be taken on walks as dogs do.\n    This makes them a great choice for people who are busy or who don't have a lot of time to devote to their pets.\n    Final Thoughts\n    If you're not sure if cats are the best pet for you, it's essential to know that they have a lot of benefits.  In this article, we've explored some of those benefits and provided reasons why owning a cat might be better than owning a dog - especially regarding independence and being low-maintenance.",
+  date: ''
 }, {
+  id: 3,
   title: '3 Most Common Dog Allergies',
   image: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-  author: '',
-  content: '',
-  url: ''
+  author: 'Anthony',
+  content: "Dogs are man's best friend, and they can be a wonderful addition to your family. However, it is essential to know that there are many things to which your dog may be allergic. Much like humans, dogs can develop allergies to food or art objects. These allergies can cause discomfort for your dog and make their health worse.\n    Three allergies seem to be the most common in our canine friends. These are environmental, food, and contact allergens.\n    3 Common Dog Allergies to Look Out For\n    Environmental Allergies\n    When you look outside your window at the trees, flowers, grasses, and other natural objects around you, your dog may also be watching them with interest. Dogs have been known to develop allergies to trees and other natural elements.\n    Food Allergies\n    Dogs' food allergies can be tricky to discover but usually, show up in a dog's skin. Dogs with food allergies may develop itchiness which is often hard for owners to detect. Since scratching can cause hair loss and sores, it makes it even more challenging to pinpoint the cause of the problem.\n    Contact Allergies\n    Some dogs may have an allergy to components of things they are in contact with every day. For instance, if your dog has long fur, it could be allergic to dust mites or pollen in its environment. This can also show up as irritation around their mouth and possibly a rash.\n    Final Thoughts\n    If you think that your dog may have an allergy, it is crucial that you take them to the vet for a proper diagnosis and treatment plan. The sooner dogs with allergies are treated, the less discomfort they will have. This means fewer trips to the veterinarian as well as healthier dogs overall.",
+  date: ''
 }, {
+  id: 4,
   title: '8 Gift Ideas for Veterinarian Front Office Staff',
   image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-  author: '',
-  content: '',
-  url: ''
+  author: 'Anthony',
+  content: "The veterinary front office staff are the unsung heroes of the veterinary world. They keep everything running smoothly and ensure that our four-legged patients get the best possible care. And they do it all with a smile on their face!\n    We\u2019ve put together a list of gift ideas for veterinary front office staff as a token of our appreciation. So please take a look and show your favorite vet tech or receptionist how much you appreciate them! We\u2019ve got something for everyone on your list, from fun and quirky to practical and valuable.\n    Best Veterinarian Front Desk Gifts\n    Desk Name Plates\n    Make your team members feel special with these personalized nameplates. Desk nameplates can be bought at any stationary store or online and make the perfect gift for the busy front office staff member.\n    Desk calendars\n    A year's supply of desk calendars is a great way to show you appreciate all they do while also keeping them on top of their schedules! You can pick up a complete bundle of 12-month desk calendars from an office supply store for less than $3 each, making them a very inexpensive gift option.\n    Reusable water bottles\n    Helping your staff stay hydrated during long days at work will improve their energy levels and allow them to get back to the basics where high morale originates: good health practices. Having everyone on staff use a reusable water bottle will help keep the office eco-friendly.\n    Tote Bags\n    These useful items can be carried by your veterinary team members throughout the day and make an excellent way to transport their belongings from one location in the clinic to another.\n    Desk organizers\n    These valuable items can help keep your veterinary team members organized throughout the day. Organizers can be used on a desk to help separate work from personal papers and belongings, improving their overall morale during the holiday season! You can find one of these organizers in most office supply or stationery stores, and they come in an array of shapes and sizes to pick out just what you need for each staff member's personality.\n    T-shirts\n    If you're looking for something that says \"thanks\" without breaking the bank, a simple t-shirt with the veterinary clinic logo or any other graphic design you choose will do just the trick. Your veterinary team members will love showing off their passion for an organization that they are proud of while also repping your brand! T-shirts can be found at most department stores and many stationary shops, with prices around $5 each.\n    Mug\n    A mug is another great way to say thanks without breaking the bank. You can find them in almost every store, including Wal-mart/Target/K-mart, office supply stores, discount stores like Big Lots, etc., department stores like Wal-mart/Target/K-mart, grocery stores, etc. Look for any color, shape, design you want and they can be found for as low as a dollar or two.\n    Pens\n    Although this might seem silly, pens are a great gift because it allows veterinary front office staff to write down special appointments or important dates that will come up during their busy season. Pens also make nice stocking stuffers! You can pick them up at pretty much any store for less than $1 each, making them inexpensive yet thoughtful holiday gifts.\n    Final Thoughts\n    Thank you for taking the time to read our gift ideas for veterinary front office staff! We hope that you find something that fits your needs and shows your appreciation for all they do. From all of us here at the clinic, happy holidays!",
+  date: ''
 }];
 
 /***/ }),
@@ -10127,14 +10164,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _styles_BlogPost_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/BlogPost.css */ "./src/styles/BlogPost.css");
+/* harmony import */ var _BlogData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlogData */ "./src/components/BlogData.js");
+/* harmony import */ var _styles_BlogPost_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/BlogPost.css */ "./src/styles/BlogPost.css");
+
+
 
 
 
 var BlogPost = function BlogPost(_ref) {
-  var post = _ref.post,
-      index = _ref.index;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);
+  var post = _ref.post;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "blog-post"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "post-title"
+  }, post.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "post-byline"
+  }, "Written by ", post.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "post-image",
+    src: post.image
+  }), post.content.split('\n').map(function (paragraph) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      className: "post-content"
+    }, paragraph);
+  }));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlogPost);
@@ -10299,7 +10351,16 @@ var NavBar = function NavBar() {
     to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "navbar-logo"
-  }, "Pet Check")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+  }, "Pet Check")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "#",
+    className: "toggle-button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "bar"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "bar"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "bar"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "nav-items"
   }, _NavBarItems__WEBPACK_IMPORTED_MODULE_1__.NavBarItems.map(function (item, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
@@ -10394,7 +10455,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".benefits-hero {\n  color: #1F0070;\n  background: #c0aed6;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.benefits-hero-head {\n  background: #c0aed6;\n  font-size: 45.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n  margin-bottom: 30px;\n}\n\n.benefits-list {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.benefits-list-item {\n  width: 50%;\n  background: #c0aed6;\n  justify-content: center;\n  padding-left: 95px;\n  padding-bottom: 30px;\n}\n\n.benefits-check-img {\n  width: 50px;\n  background: #c0aed6;\n  padding-right: 5px;\n  margin-top: 50px;\n}\n\n.benefits-list-title {\n  background: #c0aed6;\n  font-size: 40px;\n  max-width: 500px;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.benefits-list-descrip {\n  color: white;\n  background: #c0aed6;\n  font-size: 16.7px;\n  max-width: 350px;\n  padding-left: 50px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/Benefits.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,iBAAiB;EACjB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,UAAU;EACV,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,WAAW;EACX,mBAAmB;EACnB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;EACnB,eAAe;EACf,gBAAgB;EAChB,uBAAuB;EACvB,mBAAmB;EACnB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;AACpB","sourcesContent":[".benefits-hero {\n  color: #1F0070;\n  background: #c0aed6;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.benefits-hero-head {\n  background: #c0aed6;\n  font-size: 45.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n  margin-bottom: 30px;\n}\n\n.benefits-list {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.benefits-list-item {\n  width: 50%;\n  background: #c0aed6;\n  justify-content: center;\n  padding-left: 95px;\n  padding-bottom: 30px;\n}\n\n.benefits-check-img {\n  width: 50px;\n  background: #c0aed6;\n  padding-right: 5px;\n  margin-top: 50px;\n}\n\n.benefits-list-title {\n  background: #c0aed6;\n  font-size: 40px;\n  max-width: 500px;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.benefits-list-descrip {\n  color: white;\n  background: #c0aed6;\n  font-size: 16.7px;\n  max-width: 350px;\n  padding-left: 50px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".benefits-hero {\n  color: #1F0070;\n  background: #c0aed6;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.benefits-hero-head {\n  background: #c0aed6;\n  font-size: 45.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n  margin-bottom: 30px;\n}\n\n.benefits-list {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n  background: #c0aed6;\n}\n\n.benefits-list-item {\n  width: 50%;\n  background: #c0aed6;\n  justify-content: center;\n  padding-left: 95px;\n  padding-bottom: 30px;\n}\n\n.benefits-check-img {\n  width: 50px;\n  background: #c0aed6;\n  padding-right: 5px;\n  margin-top: 50px;\n}\n\n.benefits-list-title {\n  background: #c0aed6;\n  font-size: 40px;\n  max-width: 500px;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.benefits-list-descrip {\n  color: white;\n  background: #c0aed6;\n  font-size: 16.7px;\n  /* max-width: 350px; */\n  padding-left: 50px;\n}\n\n\n@media all and (max-width: 950px) {\n  .benefits-list {\n    flex-direction: column;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/Benefits.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,iBAAiB;EACjB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,eAAe;EACf,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,WAAW;EACX,mBAAmB;EACnB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;EACnB,eAAe;EACf,gBAAgB;EAChB,uBAAuB;EACvB,mBAAmB;EACnB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,iBAAiB;EACjB,sBAAsB;EACtB,kBAAkB;AACpB;;;AAGA;EACE;IACE,sBAAsB;EACxB;AACF","sourcesContent":[".benefits-hero {\n  color: #1F0070;\n  background: #c0aed6;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.benefits-hero-head {\n  background: #c0aed6;\n  font-size: 45.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n  margin-bottom: 30px;\n}\n\n.benefits-list {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n  background: #c0aed6;\n}\n\n.benefits-list-item {\n  width: 50%;\n  background: #c0aed6;\n  justify-content: center;\n  padding-left: 95px;\n  padding-bottom: 30px;\n}\n\n.benefits-check-img {\n  width: 50px;\n  background: #c0aed6;\n  padding-right: 5px;\n  margin-top: 50px;\n}\n\n.benefits-list-title {\n  background: #c0aed6;\n  font-size: 40px;\n  max-width: 500px;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.benefits-list-descrip {\n  color: white;\n  background: #c0aed6;\n  font-size: 16.7px;\n  /* max-width: 350px; */\n  padding-left: 50px;\n}\n\n\n@media all and (max-width: 950px) {\n  .benefits-list {\n    flex-direction: column;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10420,7 +10481,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".blog-archive {\n  color: #1F0070;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 100px;\n}\n\n.archive-head {\n  font-size: 48px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.archive-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  list-style: none;\n}\n\n.archive-post {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 0px;\n}\n\n.archive-post-image {\n  width: 425px;\n  height: 225px;\n\n}\n\n.archive-post-title {\n  color: #4B7FE8;\n  font-size: 24px;\n  font-weight: 700;\n  font-family: source-sans-pro,sans-serif;\n  font-style: normal;\n  margin-top: 20px;\n}", "",{"version":3,"sources":["webpack://./src/styles/BlogArchive.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,uCAAuC;AACzC;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,iBAAiB;AACnB;;AAEA;EACE,YAAY;EACZ,aAAa;;AAEf;;AAEA;EACE,cAAc;EACd,eAAe;EACf,gBAAgB;EAChB,uCAAuC;EACvC,kBAAkB;EAClB,gBAAgB;AAClB","sourcesContent":[".blog-archive {\n  color: #1F0070;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 100px;\n}\n\n.archive-head {\n  font-size: 48px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.archive-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  list-style: none;\n}\n\n.archive-post {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 0px;\n}\n\n.archive-post-image {\n  width: 425px;\n  height: 225px;\n\n}\n\n.archive-post-title {\n  color: #4B7FE8;\n  font-size: 24px;\n  font-weight: 700;\n  font-family: source-sans-pro,sans-serif;\n  font-style: normal;\n  margin-top: 20px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".blog-archive {\n  color: #1F0070;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 100px;\n}\n\n.archive-head {\n  font-size: 48px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n  text-align: center;\n}\n\n.archive-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  list-style: none;\n}\n\n.archive-post {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 0px;\n}\n\n.archive-post-image {\n  max-width: 100%;\n  width: 500px;\n}\n\n.archive-post-title {\n  color: #4B7FE8;\n  font-size: 20px;\n  font-weight: 700;\n  font-family: source-sans-pro,sans-serif;\n  font-style: normal;\n  margin-top: 20px;\n  max-width: 100%;\n}\n\n@media all and (max-width: 1050px) {\n  .blog-archive {\n    padding: 0;\n    margin: 0 auto;\n  }\n  .archive-items {\n    flex-direction: column;\n    padding: 0;\n    margin: 0 auto;\n  }\n  .archive-post-title {\n    text-align: center;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/BlogArchive.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,uCAAuC;EACvC,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,iBAAiB;AACnB;;AAEA;EACE,eAAe;EACf,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,gBAAgB;EAChB,uCAAuC;EACvC,kBAAkB;EAClB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE;IACE,UAAU;IACV,cAAc;EAChB;EACA;IACE,sBAAsB;IACtB,UAAU;IACV,cAAc;EAChB;EACA;IACE,kBAAkB;EACpB;AACF","sourcesContent":[".blog-archive {\n  color: #1F0070;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 100px;\n}\n\n.archive-head {\n  font-size: 48px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n  text-align: center;\n}\n\n.archive-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  list-style: none;\n}\n\n.archive-post {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 0px;\n}\n\n.archive-post-image {\n  max-width: 100%;\n  width: 500px;\n}\n\n.archive-post-title {\n  color: #4B7FE8;\n  font-size: 20px;\n  font-weight: 700;\n  font-family: source-sans-pro,sans-serif;\n  font-style: normal;\n  margin-top: 20px;\n  max-width: 100%;\n}\n\n@media all and (max-width: 1050px) {\n  .blog-archive {\n    padding: 0;\n    margin: 0 auto;\n  }\n  .archive-items {\n    flex-direction: column;\n    padding: 0;\n    margin: 0 auto;\n  }\n  .archive-post-title {\n    text-align: center;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10446,7 +10507,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".archive-post-image {\n  width: 20px;\n}", "",{"version":3,"sources":["webpack://./src/styles/BlogPost.css"],"names":[],"mappings":"AAAA;EACE,WAAW;AACb","sourcesContent":[".archive-post-image {\n  width: 20px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".blog-post {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n}\n\n.post-title {\n  color:#1F0070;\n  font-size: 32px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n  margin-bottom: 20px;\n  text-align: center;\n}\n\n.post-byline {\n  color: #1562ff;\n  font-size: 18px;\n  margin-bottom: 20px;\n}\n\n.post-image {\n  max-width: 100%;\n  width: 500px;\n  margin: 20px;\n}\n\n.post-content {\n  color: #4c3782;\n  font-size: 17px;\n  margin-bottom: 10px;\n  margin: 20px 150px;\n}\n\n@media all and (max-width: 650px) {\n  .post-content {\n    margin: 20px auto;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/BlogPost.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;AACf;;AAEA;EACE,aAAa;EACb,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,uCAAuC;EACvC,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,cAAc;EACd,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE;IACE,iBAAiB;EACnB;AACF","sourcesContent":[".blog-post {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n}\n\n.post-title {\n  color:#1F0070;\n  font-size: 32px;\n  font-weight: 700;\n  font-style: normal;\n  font-family: source-sans-pro,sans-serif;\n  margin-bottom: 20px;\n  text-align: center;\n}\n\n.post-byline {\n  color: #1562ff;\n  font-size: 18px;\n  margin-bottom: 20px;\n}\n\n.post-image {\n  max-width: 100%;\n  width: 500px;\n  margin: 20px;\n}\n\n.post-content {\n  color: #4c3782;\n  font-size: 17px;\n  margin-bottom: 10px;\n  margin: 20px 150px;\n}\n\n@media all and (max-width: 650px) {\n  .post-content {\n    margin: 20px auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10472,7 +10533,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".features-hero {\n  color: #fff;\n  background: #504BB2;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.col {\n  width: 50%;\n  background: #504BB2;\n}\n\n.text-wrapper {\n  background: #504BB2;\n  max-width: 450px;\n  margin-bottom: 100px;\n}\n\n.features-img {\n  background: #504BB2;\n}\n\n.features-header {\n  background: #504BB2;\n  text-align:left;\n  font-size: 44.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.features-list {\n  margin-left: 22px;\n  margin-top: 20px;\n  background: #504BB2;\n}\n\n.features-list-item {\n  background: #504BB2;\n  font-size: 19px;\n  margin-bottom: 10px;\n}", "",{"version":3,"sources":["webpack://./src/styles/Features.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,mBAAmB;EACnB,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,gBAAgB;EAChB,oBAAoB;AACtB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,eAAe;EACf,iBAAiB;EACjB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,eAAe;EACf,mBAAmB;AACrB","sourcesContent":[".features-hero {\n  color: #fff;\n  background: #504BB2;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.col {\n  width: 50%;\n  background: #504BB2;\n}\n\n.text-wrapper {\n  background: #504BB2;\n  max-width: 450px;\n  margin-bottom: 100px;\n}\n\n.features-img {\n  background: #504BB2;\n}\n\n.features-header {\n  background: #504BB2;\n  text-align:left;\n  font-size: 44.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.features-list {\n  margin-left: 22px;\n  margin-top: 20px;\n  background: #504BB2;\n}\n\n.features-list-item {\n  background: #504BB2;\n  font-size: 19px;\n  margin-bottom: 10px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".features-hero {\n  color: #fff;\n  background: #504BB2;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.col {\n  width: 50%;\n  background: #504BB2;\n}\n\n.text-wrapper {\n  background: #504BB2;\n  max-width: 450px;\n  margin-bottom: 100px;\n}\n\n.features-img {\n  background: #504BB2;\n  max-width: 100%;\n}\n\n.features-header {\n  background: #504BB2;\n  text-align:left;\n  font-size: 44.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.features-list {\n  margin-left: 22px;\n  margin-top: 20px;\n  background: #504BB2;\n}\n\n.features-list-item {\n  background: #504BB2;\n  font-size: 19px;\n  margin-bottom: 10px;\n}\n\n@media all and (max-width: 950px) {\n  .features-hero {\n    flex-direction: column;\n    justify-content: flex-start;\n    padding-left: 0;\n  }\n\n  .text-wrapper {\n    max-width: 100%;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/Features.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,mBAAmB;EACnB,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,gBAAgB;EAChB,oBAAoB;AACtB;;AAEA;EACE,mBAAmB;EACnB,eAAe;AACjB;;AAEA;EACE,mBAAmB;EACnB,eAAe;EACf,iBAAiB;EACjB,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;EACE,mBAAmB;EACnB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE;IACE,sBAAsB;IACtB,2BAA2B;IAC3B,eAAe;EACjB;;EAEA;IACE,eAAe;EACjB;AACF","sourcesContent":[".features-hero {\n  color: #fff;\n  background: #504BB2;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.col {\n  width: 50%;\n  background: #504BB2;\n}\n\n.text-wrapper {\n  background: #504BB2;\n  max-width: 450px;\n  margin-bottom: 100px;\n}\n\n.features-img {\n  background: #504BB2;\n  max-width: 100%;\n}\n\n.features-header {\n  background: #504BB2;\n  text-align:left;\n  font-size: 44.2px;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n.features-list {\n  margin-left: 22px;\n  margin-top: 20px;\n  background: #504BB2;\n}\n\n.features-list-item {\n  background: #504BB2;\n  font-size: 19px;\n  margin-bottom: 10px;\n}\n\n@media all and (max-width: 950px) {\n  .features-hero {\n    flex-direction: column;\n    justify-content: flex-start;\n    padding-left: 0;\n  }\n\n  .text-wrapper {\n    max-width: 100%;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10498,7 +10559,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".hero-page {\n  color: #4C3782;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.page-one-header {\n  font-size: 32px;\n  font-weight: 700;\n  font-style: normal;\n  margin-top: 10px;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.app-description {\n  font-size: 22px;\n  max-width: 750px;\n  text-align: center;\n}\n\n.learn-more-btn {\n  background-color: #4B7FE8;\n  border: none;\n  color: #fff;\n  font-size: 18px;\n  padding: 7px;\n  margin-top: 30px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/Hero.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,gBAAgB;EAChB,uCAAuC;AACzC;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,yBAAyB;EACzB,YAAY;EACZ,WAAW;EACX,eAAe;EACf,YAAY;EACZ,gBAAgB;AAClB","sourcesContent":[".hero-page {\n  color: #4C3782;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.page-one-header {\n  font-size: 32px;\n  font-weight: 700;\n  font-style: normal;\n  margin-top: 10px;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.app-description {\n  font-size: 22px;\n  max-width: 750px;\n  text-align: center;\n}\n\n.learn-more-btn {\n  background-color: #4B7FE8;\n  border: none;\n  color: #fff;\n  font-size: 18px;\n  padding: 7px;\n  margin-top: 30px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".hero-page {\n  color: #4C3782;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.hero-page-bg {\n  max-width: 100%;\n}\n\n.page-one-header {\n  color:#1F0070;\n  font-size: 32px;\n  font-weight: 700;\n  font-style: normal;\n  text-align: center;\n  justify-content: center;\n  margin-top: 10px;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.app-description {\n  font-size: 22px;\n  max-width: 750px;\n  text-align: center;\n}\n\n.learn-more-btn {\n  background-color: #4B7FE8;\n  border: none;\n  color: #fff;\n  font-size: 18px;\n  padding: 7px;\n  margin-top: 30px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/Hero.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,kBAAkB;EAClB,uBAAuB;EACvB,gBAAgB;EAChB,uCAAuC;AACzC;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,yBAAyB;EACzB,YAAY;EACZ,WAAW;EACX,eAAe;EACf,YAAY;EACZ,gBAAgB;AAClB","sourcesContent":[".hero-page {\n  color: #4C3782;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 60px;\n  padding-left: 120px;\n}\n\n.hero-page-bg {\n  max-width: 100%;\n}\n\n.page-one-header {\n  color:#1F0070;\n  font-size: 32px;\n  font-weight: 700;\n  font-style: normal;\n  text-align: center;\n  justify-content: center;\n  margin-top: 10px;\n  font-family: source-sans-pro,sans-serif;\n}\n\n.app-description {\n  font-size: 22px;\n  max-width: 750px;\n  text-align: center;\n}\n\n.learn-more-btn {\n  background-color: #4B7FE8;\n  border: none;\n  color: #fff;\n  font-size: 18px;\n  padding: 7px;\n  margin-top: 30px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10524,7 +10585,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n  color: #4C3782;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}", "",{"version":3,"sources":["webpack://./src/styles/NavBar.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,oBAAoB;EACpB,qBAAqB;EACrB,oBAAoB;EACpB,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,WAAW;EACX,eAAe;EACf,iBAAiB;EACjB,uBAAuB;AACzB;;AAEA;EACE,cAAc;EACd,sBAAsB;EACtB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,cAAc;EACd,qBAAqB;EACrB,sCAAsC;EACtC,cAAc;EACd,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,qBAAqB;EACrB,cAAc;AAChB;;AAEA;EACE,aAAa;EACb,oBAAoB;EACpB,iBAAiB;EACjB,mBAAmB;EACnB,iBAAiB;EACjB,cAAc;EACd,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB","sourcesContent":[".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n  color: #4C3782;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.toggle-button {\n  position: absolute;\n  top: 1.5rem;\n  right: 1rem;\n  display: none;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 30px;\n  height: 21px;\n}\n\n.toggle-button .bar {\n  height: 3px;\n  width: 100%;\n  background-color: black;\n  border-radius: 10px;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n  color: #4C3782;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n@media all and (max-width: 750px) {\n  .navbar {\n    justify-content: flex-start;\n    padding: 10px;\n  }\n  .toggle-button {\n    display: flex;\n  }\n\n  .nav-items {\n    display: none;\n    width: 100%;\n    flex-direction: column;\n    text-align: center;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/NavBar.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,oBAAoB;EACpB,qBAAqB;EACrB,oBAAoB;EACpB,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,WAAW;EACX,eAAe;EACf,iBAAiB;EACjB,uBAAuB;AACzB;;AAEA;EACE,cAAc;EACd,sBAAsB;EACtB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,WAAW;EACX,YAAY;AACd;;AAEA;EACE,WAAW;EACX,WAAW;EACX,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,cAAc;EACd,qBAAqB;EACrB,sCAAsC;EACtC,cAAc;EACd,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,qBAAqB;EACrB,cAAc;AAChB;;AAEA;EACE,aAAa;EACb,oBAAoB;EACpB,iBAAiB;EACjB,mBAAmB;EACnB,iBAAiB;EACjB,cAAc;EACd,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE;IACE,2BAA2B;IAC3B,aAAa;EACf;EACA;IACE,aAAa;EACf;;EAEA;IACE,aAAa;IACb,WAAW;IACX,sBAAsB;IACtB,kBAAkB;EACpB;AACF","sourcesContent":[".navbar {\n  height: 70px;\n  border-bottom: solid;\n  border-color: #A3C0FA;\n  border-width: 0.01px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-icon {\n  width: 22px;\n  margin-top: 5px;\n  margin-right: 2px;\n  align-items: flex-start;\n}\n\n.navbar-logo {\n  color: #4B7FE8;\n  text-decoration: solid;\n  font-size: 22px;\n  align-items: flex-start;\n}\n\n.toggle-button {\n  position: absolute;\n  top: 1.5rem;\n  right: 1rem;\n  display: none;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 30px;\n  height: 21px;\n}\n\n.toggle-button .bar {\n  height: 3px;\n  width: 100%;\n  background-color: black;\n  border-radius: 10px;\n}\n\n.nav-items {\n  display: grid;\n  color: #4C3782;\n  text-decoration: none;\n  grid-template-columns: repeat(5, auto);\n  grid-gap: 30px;\n  list-style: none;\n  text-align: center;\n  justify-content: end;\n  width: 70vw;\n  margin-right: 2rem;\n  font-size: 18px;\n  font-style: normal;\n}\n\na {\n  text-decoration: none;\n  color: #4C3782;\n}\n\n.try-it-free {\n  border: solid;\n  border-color:#4C3782;\n  border-width: 2px;\n  border-radius: 25px;\n  padding: 5px 30px;\n  color: #4B7FE8;\n  font-family: source-sans-pro,sans-serif;\n  font-weight: 700;\n  font-style: normal;\n}\n\n@media all and (max-width: 750px) {\n  .navbar {\n    justify-content: flex-start;\n    padding: 10px;\n  }\n  .toggle-button {\n    display: flex;\n  }\n\n  .nav-items {\n    display: none;\n    width: 100%;\n    flex-direction: column;\n    text-align: center;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11352,18 +11413,6 @@ function _extends() {
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -11382,22 +11431,7 @@ function _extends() {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 		__webpack_require__.p = "/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/

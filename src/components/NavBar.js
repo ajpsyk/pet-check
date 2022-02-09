@@ -11,6 +11,11 @@ const NavBar = () => {
       <NavLink to="/">
         <h1 className="navbar-logo">Pet Check</h1>
       </NavLink>
+      <a href="#" className="toggle-button">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </a>
       <ul className="nav-items">
         {NavBarItems.map((item, index) => {
           return (

@@ -23,6 +23,7 @@
 
 .features-img {
   background: #504BB2;
+  max-width: 100%;
 }
 
 .features-header {
@@ -44,4 +45,16 @@
   background: #504BB2;
   font-size: 19px;
   margin-bottom: 10px;
+}
+
+@media all and (max-width: 950px) {
+  .features-hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  .text-wrapper {
+    max-width: 100%;
+  }
 }

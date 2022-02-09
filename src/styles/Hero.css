@@ -8,10 +8,17 @@
   padding-left: 120px;
 }
 
+.hero-page-bg {
+  max-width: 100%;
+}
+
 .page-one-header {
+  color:#1F0070;
   font-size: 32px;
   font-weight: 700;
   font-style: normal;
+  text-align: center;
+  justify-content: center;
   margin-top: 10px;
   font-family: source-sans-pro,sans-serif;
 }

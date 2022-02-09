@@ -22,6 +22,24 @@
   align-items: flex-start;
 }
 
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
 .nav-items {
   display: grid;
   color: #4C3782;
@@ -52,4 +70,21 @@ a {
   font-family: source-sans-pro,sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+@media all and (max-width: 750px) {
+  .navbar {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-items {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
 }

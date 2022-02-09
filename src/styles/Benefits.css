@@ -23,6 +23,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background: #c0aed6;
 }
 
 .benefits-list-item {
@@ -55,6 +56,13 @@
   color: white;
   background: #c0aed6;
   font-size: 16.7px;
-  max-width: 350px;
+  /* max-width: 350px; */
   padding-left: 50px;
+}
+
+
+@media all and (max-width: 950px) {
+  .benefits-list {
+    flex-direction: column;
+  }
 }
