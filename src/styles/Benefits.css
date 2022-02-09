@@ -12,7 +12,7 @@
 .benefits-hero-head {
   background: #c0aed6;
   font-size: 45.2px;
-  font-family: source-sans-pro,sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 30px;
@@ -47,7 +47,7 @@
   max-width: 500px;
   justify-content: center;
   margin-bottom: 10px;
-  font-family: source-sans-pro,sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
